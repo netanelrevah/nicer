@@ -32,5 +32,5 @@ def hex_dump(data):
     return '\n'.join(lines)
 
 
-def to_string_hex(value: bytes):
-    binascii.hexlify(value).decode('ascii')
+def to_string_hex(value):
+    return binascii.hexlify(value).decode('ascii')
