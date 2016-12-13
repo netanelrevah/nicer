@@ -11,8 +11,8 @@ install:
 script:
 - tox -e $TOX_ENV
 before_deploy:
-  "echo __author__ = 'netanelrevah'\__version__ = '0.0.$TRAVIS_BUILD_NUMBER'\"
-  "echo __author__ = 'netanelrevah'\__version__ = '0.0.$TRAVIS_BUILD_NUMBER'\ > ./nicer/version.py"
+  echo __author__ = 'netanelrevah'\__version__ = '0.0.$TRAVIS_BUILD_NUMBER'\;
+  echo __author__ = 'netanelrevah'\__version__ = '0.0.$TRAVIS_BUILD_NUMBER'\ > ./nicer/version.py
 deploy:
   provider: pypi
   user: code-museum
@@ -20,5 +20,5 @@ deploy:
     secure: ucHK+uZBoGmkkQiCVuxNDApYyTrX12VRPEnuH/KLYGPwLSvsaz1FvHoy9vJRMcgBmkarf3782vCbmL23ztkZKCSkHUdHuImQ/wqQVqKj9P/vZ0jWJQ8IzAzsGHNX9H9n6wOLUOj3kBkaVRMSoJlLhR1FA2guIdGqGNcu4zqOJvt58Ux9ZTkIz64mbQKO5xJ9A6iwPxihxJ9EwWaGg/kaNu3n1hiOtcBxduM5gbfLe1a2RK2YXr6+viDqMRE/LAl+tbYG3/FmpO00wYT2B7B3v52I5HeAOjGEiOIJ4cqmqVWmBjkn/jWYnffVh0UoF0Et28H5rGemOr8xjqpCMY2qnA9wiznN2vQUEC1ziOemocvt1CepjwHmUFaaEorkVByWh75ACZXqxnVFDM0d1RwGwEYDKaWECiL6H6iWq+QeOiOAnwDsrjL9frsGQrI1uf7Aaaj38kRfF25CMfSSNfNcHFZyn0vCD6cgiX7RoVGpDTYkoWCrPxw+asbvLZcF3NV1rIcuIb80R8Je7MwJs5I9r+MyUFPszjDudCPROsXQ/TNnsbBVEAHoJ/fLpeSSBLh40l/XItVv+i+6TzvjoO54tsHaZ780rwtEs+KwZiG2j7hSZJ+l8BQgN60lg1oSerMfFY/Tq9CDKKyrHoKKhOHf+1922kk7jyu9cBoQEnPy68k=
   on:
     branch: develop
-    distributions: sdist bdist_wheel
+    distributions: "sdist bdist_wheel"
     repo: netanelrevah/nicer
