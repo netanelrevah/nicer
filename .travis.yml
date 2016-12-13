@@ -11,7 +11,8 @@ install:
 script:
 - tox -e $TOX_ENV
 before_deploy:
-- ./change_version.sh $TRAVIS_BUILD_NUMBER
+- chmod ugo+x ./scripts/change_version.sh
+- ./scripts/change_version.sh $TRAVIS_BUILD_NUMBER
 deploy:
   provider: pypi
   user: code-museum
