@@ -1,7 +1,5 @@
 import time
 from datetime import datetime, timedelta
-from typing import Tuple
-from typing import Union
 
 import pytz
 
