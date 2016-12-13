@@ -83,3 +83,6 @@ class Timestamp(ComparableMixin):
 
     def to_comparable(self):
         return self.seconds, self.seconds_parts
+
+    def __repr__(self):
+        return '<nicer.Timestamp {}:{}'.format(self.seconds, self.seconds_parts)
