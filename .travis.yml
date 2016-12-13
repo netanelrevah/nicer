@@ -11,7 +11,7 @@ install:
 script:
 - tox -e $TOX_ENV
 before_deploy:
-- echo __author__ = 'netanelrevah'\__version__ = '0.0.$TRAVIS_BUILD_NUMBER'\ > ./nicer/version.py
+- ./change_version.sh $TRAVIS_BUILD_NUMBER
 deploy:
   provider: pypi
   user: code-museum
