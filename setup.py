@@ -7,7 +7,7 @@ with open('nicer/version.py') as version_file:
     exec(version_file.read(), main_namespace)
 version = main_namespace['__version__']
 
-REQUIREMENTS = ['typing']
+REQUIREMENTS = ['typing', 'pytz']
 
 setup(
     name='nicer',
